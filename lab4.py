@@ -52,8 +52,8 @@ def task3(str = ""):
 
 def tast3_2():
     while(1):
-        num1 = input("Enter first number")
-        num2 = input("Enter second number")
+        num1 = input("Enter first number ")
+        num2 = input("Enter second number ")
         if(num1.isdigit() and num2.isdigit()):
             break
         print("Error: 404")
