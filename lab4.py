@@ -31,8 +31,27 @@ def task1():
 
 def task2():
     students = {}
-    students['alfa'] = 15
-    students['beta'] = 2
-    print(sorted(students))
+    name = True
+    while(True):
+        name = input("Enter last name: ")
+        if(name == ''):
+            break
+        student_class = int(input("Enter class: "))
+        students[name] = student_class
+    print(sorted(students.items(), key=lambda students: students[1]))
 
-task2()
+def task3(str = ""):
+    upper_count = 0
+    lower_count = 0
+    for i in str:
+        if(i.islower()):
+            lower_count = lower_count+1
+        else:
+            upper_count = upper_count+1 
+    return str.upper() if upper_count > lower_count else str.lower()
+    if(upper_count > lower_count):
+        return str.upper()
+    else:
+        return str.lower()
+6
+print(task3('aaAd'))
