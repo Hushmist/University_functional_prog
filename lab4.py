@@ -48,10 +48,15 @@ def task3(str = ""):
             lower_count = lower_count+1
         else:
             upper_count = upper_count+1 
-    return str.upper() if upper_count > lower_count else str.lower()
-    if(upper_count > lower_count):
-        return str.upper()
-    else:
-        return str.lower()
-6
-print(task3('aaAd'))
+    return str.upper() if upper_count > lower_count else str.lower() # тринарный оператор 
+
+def tast3_2():
+    while(1):
+        num1 = input("Enter first number")
+        num2 = input("Enter second number")
+        if(num1.isdigit() and num2.isdigit()):
+            break
+        print("Error: 404")
+    return (int(num1) + int(num2))
+
+print(tast3_2())
