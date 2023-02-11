@@ -40,6 +40,35 @@ def task2():
         students[name] = student_class
     print(sorted(students.items(), key=lambda students: students[1]))
 
+def task2_alternative():
+    students = []
+    courses = []
+
+    students.append('Alfa')
+    courses.append(5)
+    students.append('Beta')
+    courses.append(2)
+    students.append('Gamma')
+    courses.append(3)
+
+    for i in range(0, len(students) - 1):
+        min = courses[i]
+        selected = i
+        for j in range(i, len(students)):
+            if(courses[j] < min):
+                min = courses[j]
+                selected = j
+        temp = courses[i]
+        courses[i] = courses[selected]
+        courses[selected] = temp
+
+        temp_s = students[i]
+        students[i] = students[selected]
+        students[selected] = temp_s
+
+    print(courses)
+    print(students)
+
 def task3(str = ""):
     upper_count = 0
     lower_count = 0
@@ -59,4 +88,4 @@ def tast3_2():
         print("Error: 404")
     return (int(num1) + int(num2))
 
-print(tast3_2())
+task2_alternative()
