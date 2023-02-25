@@ -1,5 +1,14 @@
 import random
 
+def example():
+    my_list = [5, 7]
+    my_list.append(1)
+    my_list.count(5)
+    my_list.pop()
+    my_list.sort()
+    my_list.insert(1, 77)
+    print(my_list)
+
 def task1():
     students = list()
     students = []
@@ -16,7 +25,7 @@ def task1():
                 if(students[i][1] == selected):
                     print(students.pop(i))
             except:
-                print()
+                print(end='')
 
 def task2():
     students = []
@@ -58,7 +67,8 @@ def task5():
 def is_sorted(numbers):
     return numbers == sorted(numbers)
 
-# task1()
+# example()
+task1()
 # task2()
 # task3_4()
 # task3_4(True)

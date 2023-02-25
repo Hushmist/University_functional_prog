@@ -1,11 +1,25 @@
 import random
 def tuple_examples():
     my_tuple = ("Besken", "Nurtai", 19, "Anime")
-
-    print(my_tuple)
+    nums = (5, 12)
+    print(sum(nums))
+    print(max(nums))
+    print(my_tuple.count(19))
+    print(len(my_tuple))
+    
+    for i in my_tuple:
+        if(type(i) == type('str')):
+            print(i)
+    
 
 def set_examples():
+    my_set = set()
     my_set = {"Besken", "Nurtai", 19, "Anime"}
+    my_set.add('Nurtai') # unique
+    print(my_set.difference({"Besken", "Nurtai", 18, "Anime"})) #
+    my_set.pop #
+    print(my_set)
+    my_set.clear() #
     print(my_set)
 
 def task1():
@@ -56,10 +70,10 @@ def task5():
     for i in kk_str:
         en_str = en_str + (trans[i])
     return en_str
-# tuple_examples()
+tuple_examples()
 # set_examples()
 # print(task1())
 # print(taks2())
 # print(task3())
 # (task4())
-print(task5())
+# print(task5())
