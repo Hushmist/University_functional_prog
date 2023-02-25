@@ -6,7 +6,7 @@ def tuple_examples():
     print(max(nums))
     print(my_tuple.count(19))
     print(len(my_tuple))
-    
+
     for i in my_tuple:
         if(type(i) == type('str')):
             print(i)
@@ -64,16 +64,20 @@ def task5():
         'г':'g',
         'д':'d',
         'ж':'gh',
-        'ч':'ch'
+        'ч':'ch', 
+        'к':'k', 
+        'қ':'k\'', 
+        ' ': ' '
+        # etc
     }
     en_str = ''
     for i in kk_str:
         en_str = en_str + (trans[i])
     return en_str
-tuple_examples()
+# tuple_examples()
 # set_examples()
 # print(task1())
 # print(taks2())
 # print(task3())
 # (task4())
-# print(task5())
+print(task5())

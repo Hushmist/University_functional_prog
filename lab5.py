@@ -21,11 +21,10 @@ def task1():
     while(len(students) > 0):
         selected = students[0][1]
         for i in range(len(students)):
-            try:
-                if(students[i][1] == selected):
-                    print(students.pop(i))
-            except:
-                print(end='')
+            if(i >= len(students)):
+                break
+            if(students[i][1] == selected):
+                print(students.pop(i))
 
 def task2():
     students = []
@@ -68,9 +67,9 @@ def is_sorted(numbers):
     return numbers == sorted(numbers)
 
 # example()
-task1()
+# task1()
 # task2()
 # task3_4()
 # task3_4(True)
-# print(task5())
+print(task5())
 # print(is_sorted([1, 2]))
