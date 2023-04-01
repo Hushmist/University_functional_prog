@@ -1,6 +1,17 @@
 import functools # для Reduce
 
-# task 2
+#task 1
+
+def trueFunc(name):
+    return 'Hello ' + name
+
+def falseFunc(name):
+    print('Hello' + name)
+
+# print(trueFunc('Nurtai'))
+# falseFunc('Nurtai')
+
+# task 2 
 
 def getArr():
     return ['some', 'random', 'data']
@@ -13,8 +24,12 @@ def getTuple():
 def getDict():
     return {'get': 'data'}
 
-# task 3
+def getAll():
+    return {'get': ['some', ('data',)]}
 
+# print(getAll()['get'][1][0])
+
+# task 3
 
 def getMap():
     some_list = [5, 4, 6]
@@ -62,11 +77,11 @@ def f(someString):
     return someString.upper()
 
 def g(someString):
-    return someString.lower()
+    return someString + ' 123'
         
-shit = kompositionFunctions(f, g)('x')
-print(shit)
-# print(shit('Help'))
+help = kompositionFunctions(f, g)('x')
+print(help)
+# print(help('Help'))
 
 
 
