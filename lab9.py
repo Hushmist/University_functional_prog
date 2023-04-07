@@ -83,5 +83,5 @@ help = kompositionFunctions(f, g)('x')
 print(help)
 # print(help('Help'))
 
-
+# some extra useless data
 
